@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        //alert("Baguio chaatoo");
+        a = 1;
+        function acenderLampada(){
+            if(a != 2){
+                document.getElementById("luz").src="../_imagens/lampada-acesa.jpg";
+            }
+        }
+        function apagarLampada(){
+            if(a != 2){
+                document.getElementById("luz").src="../_imagens/lampada-apagada.jpg";
+            }
+        }
+        function quebrarLampada(){
+            document.getElementById("luz").src="../_imagens/lampada-quebrada.jpg";
+            a = 2;    
+        }
+    </script>    
+</head>
+<body>
+    <br/>
+    <img src="../_imagens/lampada-apagada.jpg" id="luz" onmousemove="acenderLampada()" onmouseout="apagarLampada()" onclick="quebrarLampada()"/>
+</body>

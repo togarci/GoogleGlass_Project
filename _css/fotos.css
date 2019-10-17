@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+
+ul#album-fotos{
+    display: block;
+    width: 100%;
+    margin-left: 5%;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+}
+
+ul#album-fotos li{
+    float: left;
+    font-family: cursive;
+    font-weight: bolder;
+    width: 250px;
+    height: 200px;
+    border-radius: 1em;
+    margin: 5px;
+    padding: 10px;
+    -webkit-transition: all 0.4s ease-in;
+}
+ul#album-fotos li#foto01{
+    background: url("../_imagens/galeria-01.jpg") no-repeat;
+
+}
+ul#album-fotos li#foto01:hover{
+    background: url("../_imagens/galeria-01.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+    
+}
+ul#album-fotos li#foto02{
+    background: url("../_imagens/galeria-02.jpg") no-repeat;
+}
+ul#album-fotos li#foto02:hover{
+    background: url("../_imagens/galeria-02.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+}
+    
+ul#album-fotos li#foto03{
+    background: url("../_imagens/galeria-03.jpg") no-repeat;
+}
+ul#album-fotos li#foto03:hover{
+    background: url("../_imagens/galeria-03.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+}
+ul#album-fotos li#foto04{
+    background: url("../_imagens/galeria-04.jpg") no-repeat;
+}
+ul#album-fotos li#foto04:hover{
+    background: url("../_imagens/galeria-04.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+}
+ul#album-fotos li#foto05{
+    background: url("../_imagens/galeria-05.jpg") no-repeat;
+}
+ul#album-fotos li#foto05:hover{
+    background: url("../_imagens/galeria-05.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+}
+ul#album-fotos li#foto06{
+    background: url("../_imagens/galeria-06.jpg") no-repeat;
+}
+ul#album-fotos li#foto06:hover{
+    background: url("../_imagens/galeria-06.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 200px 200px;
+}
+ul#album-fotos li span {
+    opacity: 0;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    border-radius: 1em;  
+    font-size: 8pt;
+    position: relative;
+    left: 11%;
+}
+ul#album-fotos li:hover span{
+    transition: 0.5s;
+    opacity: 1;
+}
+
+ul#album-fotos li:hover{
+    -webkit-transform: scale(1.5);
+}

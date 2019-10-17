@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Google Glass Site</title>
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+        <script src="_javascript/funcoes.js"></script>
+        <script>
+            function calTotal(){
+                var qtd = parseFloat(document.getElementById('cQtd').value);
+                total = qtd * 168.98;
+                document.getElementById('tPreco').value = total;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="interface">
+            <header id="cabecalho">
+                <hgroup id="title">
+                    <h1 style="color:rgb(32, 32, 230)">G</h1><h1 style="color: red">o</h1><h1 style="color: yellow">o</h1><h1 style="color:rgb(32, 32, 230)">g</h1><h1 style="color: green">l</h1><h1 style="color: red">e</h1><h1 style="color: gray">Glass</h1>
+                    <h2>revolução do Google está chegando</h2>
+                </hgroup>
+                <img src="_imagens/glass-oculos-preto-peq.png" id="icone">
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul>
+                        <li onmousemove="changeIcon('home.png')" onmouseout="changeIcon('glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+                        <li onmousemove="changeIcon('especificacoes.png')" onmouseout="changeIcon('glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+                        <li onmousemove="changeIcon('fotos.png')" onmouseout="changeIcon('glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+                        <li onmousemove="changeIcon('multimidia.png')" onmouseout="changeIcon('glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmousemove="changeIcon('contato.png')" onmouseout="changeIcon('glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>                   
+            </header>
+            <header id="corpo">
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Thyago Garcia</h2>
+                <h3 class="date">Atualizado em 24/Agosto/2019</h3>
+            </header>
+            <form method="POST" id="fContato" action="mailto:thyago.garcia@fatec.sp.gov.br" oninput="calTotal()">
+                <fieldset id="usuario"><legend><h3>Identificação do Usuário</h3></legend>
+                    <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="20" maxlength="20" placeholder="Nome Completo"/></p>
+                    <p><label for="cSenha">Senha: </label> <input type="password" name="tSenha" id="cSenha" placeholder="Senha"/></p>
+                    <p><label for="cEmail">E-mail: </label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="20" placeholder="E-mail"/></p>
+                    <hgroup>
+                        <p>Sexo: </p>
+                        <input type="radio" name="tSexo" id="cMasc"/><label for="cMasc">Masculino</label>
+                        <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label>
+                    </hgroup>
+                    <p><label for="cData">Data de Nascimento: </label> <input type="date" name="tData" id="cData"/></p>
+                </fieldset>
+
+                <fieldset id="endereco"><legend><h3>Endereço do Usuário</h3></legend>
+                    <p><label for="cRua">Rua: </label> <input type="text" name="tRua" id="cRua" size="40" maxlength="40" placeholder="Rua, Ave, etc..." /></p>
+                    <p><label for="cNumber">Numero: </label><input type="number" name="tNumber" id="cNumber" min="0" max="9999"/></p>
+                    <p><label for="cEstado">Estado: </label><select name="tEstado" id="cEstado">
+                        <option selected value="SP">SP</option>
+                        <option value="MG">MG</option>
+                        <option value="PR">PR</option>
+                        <option value="SC">SC</option>
+                        <option value="BH">BH</option>
+                        <option value="AM">AM</option>
+                    </select> </p>
+                    <p><label for="cCid">Cidade: </label><input type="text" name="tCid" id="cCid" maxlength="20" placeholder="Cidade" list="cidades"/></p>
+                    <datalist id="cidades">
+                        <option value="Jacareí"></option>
+                        <option value="São Jose dos Campos"></option>
+                        <option value="Guararema"></option>
+                        <option value="Mogi das Cruzes"></option>
+                        <option value="Caçapava"></option>
+                    </datalist>
+                </fieldset>
+
+                <fieldset id="feedback"><legend><h3>Mensagem do Usuário</h3></legend>
+                    <p><label for="cUrg">Grau de Urgência: Min</label><input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Max</p>
+                    <p><label for="cMsg">Mensagem: <textarea type="text" name="tMsg" id="cMsg" cols="50" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></label></p>
+                </fieldset>
+
+                <fieldset id="pedido"><legend><h3>Quero um Google Glass</h3></legend>
+                    <p><input type="checkbox" name="cPed" id="tPed" checked/> <label for="tPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                    <p><label for="tCor">Cor: </label><input type="color" name="cCor" id="tCor" value="#ffffff" </p>
+                    <p><label for="tQtd">Quantidade: </label><input type="number" name="cQtd" id="cQtd" min="0" max="5"></p>
+                    <p><label for="tPreco">Preço Total: R$</label><input type="number" name="cPreco" id="tPreco" readonly/></p>
+                </fieldset>    
+
+                <input type="submit" id="btnEnviar" value="Enviar"/>
+            
+            </form>
+            <footer id="rodape">
+                <p>Copyright&copy; 2019 - by Thyago Garcia <br/><a href="https://www.facebook.com/thyago.odorico" target="_blank">Facebook</a> |<a href="https://twitter.com/thyagogarcia8" target="_blank">Twitter</a></p>
+            </footer>
+        </div>
+    </body>
+</html>

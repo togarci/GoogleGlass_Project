@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@font-face{
+    font-family: "subTitle";
+    src: url('../_fonts/bubblegum-sans-regular.otf');
+}
+
+form{
+    width: 500px;
+    margin: auto;
+}
+
+fieldset{
+    border-style: none;
+    background-color: whitesmoke;
+    border-radius: 1em;
+}
+
+hgroup{
+    font-family: cursive;
+}
+input{
+    font-family: cursive;
+    border-radius: .3em;
+    box-shadow: none;
+}
+textarea{
+    position: relative;
+    left: 5%;
+    width: 420px;
+    font-family: cursive;
+    border-radius: 1em;
+
+}
+input#btnEnviar{
+    position: relative;
+    left: 85%;
+    font-family: subTitle;
+    font-size: 15pt;
+    padding: 5px;
+    margin: 10px;
+    background-color: whitesmoke;
+}
+
+

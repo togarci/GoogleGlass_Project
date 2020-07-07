@@ -1,3 +1,11 @@
 # GoogleGlass_Project
 
-Pagina criada para aplicar minha habilidades em HTML, CSS e JavaScript
+Projeto criado para aprendizado com o foco no Front-End Web.
+
+### Liguagens usadas
+
+* HTML5 
+* CSS3 
+* JavaScript
+
+![demonstracao](_imagens/GoogleGlass.png)

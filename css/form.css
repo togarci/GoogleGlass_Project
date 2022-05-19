@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face{
     font-family: "subTitle";
-    src: url('../_fonts/bubblegum-sans-regular.otf');
+    src: url('../fonts/bubblegum-sans-regular.otf');
 }
 
 form{
